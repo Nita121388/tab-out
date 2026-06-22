@@ -86,11 +86,7 @@ Everything runs inside the Chrome extension. No external server, no API calls, n
 
 After changing files, open `chrome://extensions` and click **Reload** on the Tab Out card.
 
-For local development on this machine, the unpacked extension path is:
-
-```text
-E:\projects\tab-out\extension
-```
+The unpacked extension path is the `extension/` folder inside your local clone. See [docs/development-notes.md](docs/development-notes.md) for the fork-specific architecture notes and validation checklist.
 
 Chrome displays extension pages as `chrome-extension://<extension-id>/index.html`. That is expected; it is the sandboxed extension URL, not a normal `file:///` URL.
 
