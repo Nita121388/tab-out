@@ -62,6 +62,29 @@ async function updateBadge() {
 
 // ─── Event listeners ──────────────────────────────────────────────────────────
 
+async function openDashboard(sourceTab) {
+  const dashboardUrl = chrome.runtime.getURL('index.html');
+  const tabs = await chrome.tabs.query({});
+  const existingDashboard = tabs.find(tab => (
+    tab.url === dashboardUrl &&
+    tab.windowId === sourceTab.windowId
+  ));
+
+  if (existingDashboard?.id) {
+    await chrome.tabs.update(existingDashboard.id, { active: true });
+    return;
+  }
+
+  await chrome.tabs.create({
+    url: dashboardUrl,
+    windowId: sourceTab.windowId
+  });
+}
+
+chrome.action.onClicked.addListener(tab => {
+  openDashboard(tab);
+});
+
 // Update badge when the extension is first installed
 chrome.runtime.onInstalled.addListener(() => {
   updateBadge();

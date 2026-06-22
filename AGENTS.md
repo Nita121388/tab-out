@@ -8,7 +8,7 @@ You're installing **Tab Out** for the user. Your job is not just to set it up --
 
 Before doing anything technical, tell the user what they're about to get:
 
-> **Tab Out** replaces your new tab page with a clean dashboard of everything you have open, grouped by domain.
+> **Tab Out** opens from the toolbar as a clean dashboard of everything you have open, grouped by domain.
 >
 > Here's what makes it great:
 > - **See all your open tabs at a glance** grouped by domain on a grid
@@ -26,7 +26,7 @@ Before doing anything technical, tell the user what they're about to get:
 ## Step 1 -- Clone the repo
 
 ```bash
-git clone https://github.com/zarazhangrui/tab-out.git
+git clone https://github.com/Nita121388/tab-out.git
 cd tab-out
 ```
 
@@ -73,7 +73,7 @@ open "chrome://extensions"
 
 Once the extension is loaded:
 
-> You're all set! Open a **new tab** and you'll see Tab Out.
+> You're all set! Click the **Tab Out toolbar icon** and you'll see Tab Out.
 >
 > Here's how it works:
 > 1. **Your open tabs are grouped by domain** in a grid layout.
